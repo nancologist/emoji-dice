@@ -5,4 +5,5 @@
 * State Management: 
     * ``redux`` (does not need any extra @types package)
     * ``react-redux`` (plus ``@types/react-redux`` )
+    * ``redux-thunk`` (A middleware for Redux to add async functionalities)
 * Ajax Requests: ``axios``
