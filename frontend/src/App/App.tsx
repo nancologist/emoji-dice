@@ -16,7 +16,11 @@ function App(props: Props) {
   return (
     <div className="App">
       <h1>Emoji Dice</h1>
-      {props.dice.map((item: EmojiType) => <Emoji key={item.name} emoji={item.emoji}/>)}
+      <div className="dice">
+        {props.dice.map((item: EmojiType) => 
+          <Emoji key={item.name} emoji={item.emoji}/>
+        )}
+      </div>
     </div>
   );
 }

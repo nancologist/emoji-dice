@@ -1,3 +1,10 @@
 .App {
   text-align: center;
 }
+
+.dice {
+  display: inline-grid;
+  width: fit-content;
+  grid-template-columns: repeat(3, 34%);
+  margin: auto;
+}
