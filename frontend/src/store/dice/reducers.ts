@@ -13,7 +13,6 @@ export default function reducer (
 ): DiceState {
     switch (action.type) {
         case SET_DICE:
-            console.log(getRandomEmoji(emojis));
             return {
                 ...state,
                 dice: getEmojis(emojis, state.usedEmojis)

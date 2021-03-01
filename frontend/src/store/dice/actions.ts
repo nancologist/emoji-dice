@@ -6,8 +6,3 @@ export function dispatchSetDice(): DiceActionTypes {
     };
 }
 
-// export function getDice() {
-//     return {
-//         type: GET_DICE
-//     };
-// }
