@@ -1,6 +1,6 @@
 import { DiceState, DiceActionTypes, GET_DICE } from './types';
 import { getEmojis } from './utils';
-import emojis from '../../data/index.json';
+import { emojis } from '../../data/emojis';
 
 const initialState: DiceState = {
     dice: [],

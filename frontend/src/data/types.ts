@@ -1,4 +1,5 @@
 export interface Emoji {
+    id?: number;
     emoji: string;
     name: string;
     emoji_version: string;

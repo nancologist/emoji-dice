@@ -7,14 +7,10 @@ import { Emoji as EmojiType } from '../data/types';
 import { dispatchGetDice } from '../store/dice/actions';
 import { DiceState } from '../store/dice/types';
 import Emoji from '../components/Emoji/Emoji';
-import emojis from '../data/index.json';
 
 function App(props: Props) {
-  const myEmoji = emojis['Animals & Nature'][1].emoji;
-  
   useEffect(() => {
     props.getDice();
-    console.log(props.dice)
   }, []);
 
   return (
