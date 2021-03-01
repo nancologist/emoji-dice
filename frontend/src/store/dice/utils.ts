@@ -9,8 +9,6 @@ export const getEmojis = (emojis: Emoji[], usedEmojis: string[]): Emoji[] => {
         const emoji = { ...emojis[randIndex!], id: randIndex };
         result.push(emoji);
     }
-    console.log(result);
-
     return result
 }
 

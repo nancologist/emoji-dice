@@ -1,8 +1,10 @@
 .emoji {
     border: 1px solid #ccc;
     border-radius: 5px;
-    display: inline-block;
+    display: inline-flex;
     font-size: 35px;
     height: 50px; width: 50px;
+    justify-content: center;
+    align-items: center;
     padding: 5px;
 }
