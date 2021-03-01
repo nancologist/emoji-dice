@@ -1,6 +1,8 @@
-export const getEmojis = (emojis: any, usedEmojis: string[]): string[] => {
+import { Emoji } from '../../data/types';
+
+export const getEmojis = (emojis: any, usedEmojis: string[]): Emoji[] => {
     // Todo: Filter the used emojis...
-    const result: string[] = [];
+    const result: Emoji[] = [];
     for (let i = 0; i < 9; i++) {
         const emoji = getRandomEmoji(emojis);
         result.push(emoji);
@@ -9,7 +11,7 @@ export const getEmojis = (emojis: any, usedEmojis: string[]): string[] => {
     return result
 }
 
-export const getRandomEmoji = (emojis: any): string => {
+export const getRandomEmoji = (emojis: any): Emoji => {
     const keys = Object.keys(emojis);
     let keyIndex = Math.floor(Math.random() * keys.length);
     const groupedEmojis = (emojis as any)[keys[keyIndex]];

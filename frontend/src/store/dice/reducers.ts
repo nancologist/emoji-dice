@@ -1,5 +1,5 @@
-import { DiceState, DiceActionTypes, SET_DICE } from './types';
-import { getEmojis, getRandomEmoji } from './utils';
+import { DiceState, DiceActionTypes, GET_DICE } from './types';
+import { getEmojis } from './utils';
 import emojis from '../../data/index.json';
 
 const initialState: DiceState = {
@@ -12,7 +12,7 @@ export default function reducer (
     action: DiceActionTypes
 ): DiceState {
     switch (action.type) {
-        case SET_DICE:
+        case GET_DICE:
             return {
                 ...state,
                 dice: getEmojis(emojis, state.usedEmojis)

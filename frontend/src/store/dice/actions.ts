@@ -1,8 +1,8 @@
-import { SET_DICE, GET_DICE, DiceActionTypes } from './types';
+import { GET_DICE, DiceActionTypes } from './types';
 
-export function dispatchSetDice(): DiceActionTypes {
+export function dispatchGetDice(): DiceActionTypes {
     return {
-        type: SET_DICE
+        type: GET_DICE
     };
 }
 

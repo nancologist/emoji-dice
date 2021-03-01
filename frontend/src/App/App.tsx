@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import './App.css';
 import { Props } from './types';
-import { dispatchSetDice } from '../store/dice/actions';
+import { Emoji as EmojiType } from '../data/types';
+import { dispatchGetDice } from '../store/dice/actions';
 import { DiceState } from '../store/dice/types';
 import Emoji from '../components/Emoji/Emoji';
 import emojis from '../data/index.json';
@@ -11,26 +12,25 @@ import emojis from '../data/index.json';
 function App(props: Props) {
   const myEmoji = emojis['Animals & Nature'][1].emoji;
   
-  const handleClick = () => {
-    props.setDice()
-  };
+  useEffect(() => {
+    props.getDice();
+    console.log(props.dice)
+  }, []);
 
   return (
     <div className="App">
       <h1>Emoji Dice</h1>
-      <Emoji emoji={myEmoji}/>
-      <br/><br/>
-      <button onClick={handleClick}>Rand EMOJI</button>
+      {props.dice.map((item: EmojiType) => <Emoji key={item.name} emoji={item.emoji}/>)}
     </div>
   );
 }
 
 const mapStateToProps = (state: DiceState) => ({
-
+  dice: state.dice
 });
 
 const mapDispatchToProps = {
-    setDice: () => (dispatchSetDice())
+    getDice: () => (dispatchGetDice())
 };
 
 export const connector = connect(mapStateToProps, mapDispatchToProps)

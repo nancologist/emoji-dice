@@ -1,17 +1,14 @@
-export const SET_DICE = 'SET_DICE';
+import { Emoji } from '../../data/types';
+
 export const GET_DICE = 'GET_DICE';
 
 export interface DiceState {
-    dice: string[];
+    dice: Emoji[];
     usedEmojis: string[]
-}
-
-interface SetDice {
-    type: typeof SET_DICE;
 }
 
 interface GetDice {
     type: typeof GET_DICE;
 }
 
-export type DiceActionTypes = SetDice | GetDice;
+export type DiceActionTypes = GetDice;
