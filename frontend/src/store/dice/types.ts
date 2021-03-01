@@ -3,6 +3,7 @@ export const GET_DICE = 'GET_DICE';
 
 export interface DiceState {
     dice: string[];
+    usedEmojis: string[]
 }
 
 interface SetDice {
